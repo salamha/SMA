@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <title>@ViewBag.Title - Al-omeri Admin</title>
+    @Styles.Render("~/Content/css/bootstrap.min.css ")
+    @Styles.Render("~/Content/css/font-awesome.min.css")
+    @Styles.Render("~/Content/css/ionicons.min.css")
+    @Styles.Render("~/Content/css/AdminLTE.min.css")
+    @Styles.Render("~/Content/css/skin-blue.min.css")
+   
+
+    
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <!--header-->
+
+        @Html.Partial("_PartialLayoutWebsiteForAdminEN/_PartialLayoutWebsiteForAdminEN_Header")
+
+        <!--محتويات  جزء الراس من الصفحة -->
+        <!--/header-->
+        <!-- sidebar-->
+        @Html.Partial("_PartialLayoutWebsiteForAdminEN/_PartialLayoutWebsiteForAdminEN_LeftSide")
+        <!-- /sidebar-->
+        <div class="content-wrapper">
+            <section class="content-header">
+                <h1>
+                    Page Header
+                    <small>Optional description</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                    <li class="active">Here</li>
+                </ol>
+            </section>
+            <section class="content">
+                @RenderBody()
+            </section>
+        </div>
+           
+        
+
+
+
+        <!--Footer-->
+        @Html.Partial("_PartialLayoutWebsiteForAdminEN/_PartialLayoutWebsiteForAdminEN_Footer")
+        @Html.Partial("_PartialLayoutWebsiteForAdminEN/_PartialLayoutWebsiteForAdminEN_ControlSidebar")
+
+
+        <!--/Footer-->
+
+        <div class="control-sidebar-bg"></div>
+    </div>
+
+        @Scripts.Render("~/Scripts/js/jquery-2.2.3.min.js")
+        @Scripts.Render("~/Scripts/js/bootstrap.min.js")
+        @Scripts.Render("~/Scripts/js/app.min.js")
+ 
+        <!--// RenderSection("scripts", required: false)-->
+
+</body>
+</html>
